@@ -13,7 +13,7 @@ const about = {
   info: [
     {
       fieldName: 'Name',
-      fieldValue: 'Islem Fortas',
+      fieldValue: 'Jacoub Fortas',
     },
     {
       fieldName: 'Phone',
@@ -25,7 +25,7 @@ const about = {
     },
     {
       fieldName: 'LinkedIn',
-      fieldValue: 'Fortas Nour El Islem Yaakoub',
+      fieldValue: 'Fortas Nour El Jacoub Yaakoub',
     },
     {
       fieldName: 'Nationality',
@@ -33,7 +33,7 @@ const about = {
     },
     {
       fieldName: 'Email',
-      fieldValue: 'contact@islem-fortas.site',
+      fieldValue: 'contact@jacoub-fortas.site',
     },
     {
       fieldName: 'Freelance',

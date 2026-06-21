@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import {JetBrains_Mono} from "next/font/google";
+// @ts-ignore: allow importing global css without type declarations
 import "./globals.css";
 
 // components
@@ -28,8 +29,8 @@ const jetbrainsMono = JetBrains_Mono({subsets: ["latin"],
 variable : "--font-jetbrainsMono",
 })
 export const metadata: Metadata = {
-  title: "Islem Fortas Portfolio",
-  description: "Welcome to my portfolio, do not forget to say HELLO!",
+  title: "Jacoub Fortas Portfolio",
+  description: "Video editing portfolio for long-form, reels, motion graphics, and creative ads.",
 };
 
 export default function RootLayout({
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${jetbrainsMono.variable}  antialiased`}>
           <SpeedInsights/>
