@@ -124,7 +124,7 @@ const Home = () => {
       <div className="orb orb-2 pointer-events-none absolute right-0 top-[32rem]" />
 
       <section className="relative container mx-auto pt-6 pb-20 xl:pt-10 xl:pb-28">
-        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:items-center">
+        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] md:items-center xl:items-center">
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }} className="space-y-8">
             <motion.div
               variants={fadeUp}
@@ -134,11 +134,11 @@ const Home = () => {
               whileHover={{ scale: 1.03, y: -2 }}
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur-sm transition-transform"
             >
-              <FaRegCircle className="text-accent text-xs" />
-              Dark-mode video editing portfolio
+              <FaRegCircle className="text-accent text-xs text-justify" />
+              Let's create something together.
             </motion.div>
 
-            <div className="space-y-6">
+            <div className="space-y-7 max-w-sm  text-center md:text-lg xl:text-left">
               <motion.h1 variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08, duration: 0.6, ease: "easeOut" }} className="h1 max-w-3xl">
                 Video editing portfolio for <span className="text-gradient">long-form</span> and <span className="text-gradient">short-form</span> brands.
               </motion.h1>
