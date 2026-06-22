@@ -123,8 +123,8 @@ const Home = () => {
       <div className="orb orb-1 pointer-events-none absolute -left-24 top-16" />
       <div className="orb orb-2 pointer-events-none absolute right-0 top-[32rem]" />
 
-      <section className="relative container mx-auto pt-6 pb-20 xl:pt-10 xl:pb-28">
-        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] md:items-center xl:items-center">
+      <section className="relative container mx-auto pt-6 pb-20 xl:pt-10 xl:pb-28 items-center">
+        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] items-center">
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }} className="space-y-8">
             <motion.div
               variants={fadeUp}
