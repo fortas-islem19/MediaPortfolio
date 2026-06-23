@@ -124,7 +124,7 @@ const Home = () => {
       <div className="orb orb-2 pointer-events-none absolute right-0 top-[32rem]" />
 
       <section className="relative container mx-auto pt-6 pb-20 xl:pt-10 xl:pb-28 items-center">
-        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] items-center">
+        <div className="flex flex-col items-center">
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }} className="space-y-8">
             <motion.div
               variants={fadeUp}
@@ -138,7 +138,7 @@ const Home = () => {
               Let's create something together.
             </motion.div>
 
-            <div className="space-y-7 max-w-sm  text-center md:text-lg xl:text-left">
+            <div className="flex flex-col justify-center space-y-7 max-w-sm text-center">
               <motion.h1 variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08, duration: 0.6, ease: "easeOut" }} className="h1 max-w-3xl">
                 Video editing portfolio for <span className="text-gradient">long-form</span> and <span className="text-gradient">short-form</span> brands.
               </motion.h1>
@@ -184,21 +184,21 @@ const Home = () => {
           </motion.div>
 
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }} className="relative">
-            <motion.div whileHover={{ y: -10, scale: 1.01 }} transition={{ type: "spring", stiffness: 200, damping: 18 }} className="glass-panel relative overflow-hidden p-6 xl:p-8">
+            <motion.div whileHover={{ y: -10, scale: 1.01 }} transition={{ type: "spring", stiffness: 200, damping: 18 }} className="mx-30 glass-panel relative overflow-hidden p-6 xl:p-8">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-70" />
-              <div className="mb-6 flex items-center justify-between">
+              <div className="my-6 mx-7 tems-center justify-between">
                 <div>
                   <p className="text-sm uppercase tracking-[0.35em] text-white/45">Now editing</p>
                   <h2 className="mt-2 text-2xl font-semibold text-white">Landscape x Vertical systems</h2>
                 </div>
-                <div className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-white/70">
+                <div className="rounded-full border border-white/10 bg-black/30-3 py-1 text-xs text-white/70">
                   Available for hire
                 </div>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="mx-5grid gap-4 sm:grid-cols-2">
                 <motion.div whileHover={{ y: -6, scale: 1.01 }} className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/20 via-slate-900 to-fuchsia-500/20 p-5 min-h-[18rem] transition-transform">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.22),_transparent_38%)]" />
+                  <div className="mx- absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.22),_transparent_38%)]" />
                   <div className="relative flex h-full flex-col justify-between">
                     <div className="flex items-center justify-between text-sm text-white/70">
                       <span>Long form</span>
