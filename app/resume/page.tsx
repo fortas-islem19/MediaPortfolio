@@ -21,7 +21,7 @@ const about = {
     },
     {
       fieldName: 'Experience',
-      fieldValue: '+10 Years',
+      fieldValue: '+3 Years',
     },
     {
       fieldName: 'LinkedIn',
@@ -33,7 +33,7 @@ const about = {
     },
     {
       fieldName: 'Email',
-      fieldValue: 'contact@islem-fortas.site',
+      fieldValue: 'contact@jacoub.me',
     },
     {
       fieldName: 'Freelance',

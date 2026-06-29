@@ -5,30 +5,34 @@ import Link from "next/link";
  
 const services = [
   {
-    num: '01',
-    title: 'Frontend Developement',
-    description: 'I specialize in front-end development, crafting seamless, interactive, and responsive user interfaces for exceptional digital experiences..' ,
-    href: ""
+    num: "01",
+    title: "Media Buying",
+    description:
+      "I excel at driving high-converting marketing campaigns and I am proficient in various media buying platforms and digital strategies",
+    href: "",
   },
   {
-    num: '02',
-    title: 'UI/UX Design',
-    description: 'I offer UI/UX design services that focus on creating intuitive and engaging interfaces to enhance user satisfaction and drive effective interaction.' ,
-    href: ""
+    num: "02",
+    title: "UI/UX Design",
+    description:
+      "I offer UI/UX design services that focus on creating intuitive and engaging interfaces to enhance user satisfaction and drive effective interaction.",
+    href: "",
   },
   {
-    num: '03',
-    title: 'Photo/Video-Graphy',
-    description: 'I provide expert photography and videography services, capturing compelling visuals that tell your story and resonate with your audience.' ,
-    href: ""
+    num: "03",
+    title: "Photo/Video-Graphy",
+    description:
+      "I provide expert photography and videography services, capturing compelling visuals that tell your story and resonate with your audience.",
+    href: "",
   },
   {
-    num: '04',
-    title: 'Video Editing',
-    description: 'I deliver professional video editing services, transforming raw footage into polished, impactful visual narratives tailored to your objectives.' ,
-    href: ""
+    num: "04",
+    title: "Video Editing",
+    description:
+      "I deliver professional video editing services, transforming raw footage into polished, impactful visual narratives tailored to your objectives.",
+    href: "",
   },
-]
+];
 
 
 import { motion } from "framer-motion";
