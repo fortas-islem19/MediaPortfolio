@@ -53,18 +53,20 @@ const contact = () => {
                 solutions.
               </p>
               {/* input */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First Name" name="FirstName" />
-                <Input type="text" placeholder="Last Name" name="LastName" />
+              <div className="flex flex-wrap gap-6">
+                <Input type="text" placeholder="First Name" name="FirstName" className="w-full md:w-[calc(50%-12px)]" />
+                <Input type="text" placeholder="Last Name" name="LastName" className="w-full md:w-[calc(50%-12px)]" />
                 <Input
                   type="email"
                   placeholder="Email Address"
                   name="Email_Address"
+                  className="w-full md:w-[calc(50%-12px)]"
                 />
                 <Input
                   type="text"
                   placeholder="Phone Number (WhatsApp)"
                   name="Phone_Number_(WhatsApp)"
+                  className="w-full md:w-[calc(50%-12px)]"
                 />
               </div>
               <Select /*onValueChange={value => setService(value)}*/>
