@@ -21,7 +21,7 @@ const about = {
     },
     {
       fieldName: 'Experience',
-      fieldValue: '+10 Years',
+      fieldValue: '+3 Years',
     },
     {
       fieldName: 'LinkedIn',
@@ -33,7 +33,11 @@ const about = {
     },
     {
       fieldName: 'Email',
+<<<<<<< HEAD
       fieldValue: 'contact@jacoub-fortas.site',
+=======
+      fieldValue: 'contact@jacoub.me',
+>>>>>>> a48d5c5be049618bf21277abe54996c47a057dfd
     },
     {
       fieldName: 'Freelance',
@@ -217,10 +221,10 @@ const resume = () => {
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
                 <ScrollArea className="h-[400px] overflow-y-auto scrollbar-hide">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="flex flex-wrap gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 w-full lg:w-[calc(50%-15px)]">
                           <span className="block text-sm text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                           <div className="flex items-center gap-3">
@@ -241,10 +245,10 @@ const resume = () => {
               <h3 className="text-4xl font-bold">{education.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
                 <ScrollArea className="h-[400px] overflow-y-auto scrollbar-hide">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="flex flex-wrap gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 w-full lg:w-[calc(50%-15px)]">
                           <span className="block text-sm text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.Degree}</h3>
                           <div className="flex items-center gap-3">
@@ -269,10 +273,10 @@ const resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {skills.description}
                 </p>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="flex flex-wrap gap-4 xl:gap-[30px]">
                   {skills.skillslist.map((skill, index)=>{
                     return (
-                      <li key={index}>
+                      <li key={index} className="w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] md:w-[calc(25%-12px)] xl:w-[calc(25%-23px)]">
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center" >
@@ -298,10 +302,10 @@ const resume = () => {
                   <div className="flex flex-col gap-[30px]">
                     <h3 className="text-4xl font-bold">{about.title}</h3>
                     <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                    <ul className="flex flex-wrap gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                       {about.info.map((item, index)=>{
                         return (
-                          <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                          <li key={index} className="flex items-center justify-center xl:justify-start gap-4 w-full xl:w-1/2">
                             <span className="text-white/60">{item.fieldName}</span>
                             <span className="text-xl">{item.fieldValue}</span>
                           </li>

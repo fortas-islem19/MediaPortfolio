@@ -16,7 +16,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: 'Email',
-    description: 'contact@jacoub-fortas.site',
+    description: 'contact@islem-fortas.site',
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -26,7 +26,7 @@ const info = [
 ];
 
 const contact = () => {
-  
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -53,45 +53,27 @@ const contact = () => {
                 solutions.
               </p>
               {/* input */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First Name" name="FirstName" />
-                <Input type="text" placeholder="Last Name" name="LastName" />
-                <Input
-                  type="email"
-                  placeholder="Email Address"
-                  name="Email_Address"
-                />
-                <Input
-                  type="text"
-                  placeholder="Phone Number (WhatsApp)"
-                  name="Phone_Number_(WhatsApp)"
-                />
+              <div className="flex flex-col gap-6">
+                <Input type="text" placeholder="Full Name" name="FullName" />
+                <Input type="email" placeholder="Email Address" name="Email" />
+                <Input type="text" placeholder="Phone Number (WhatsApp)" name="Phone_WhatsApp" />
               </div>
-              <Select /*onValueChange={value => setService(value)}*/>
+              <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="web-development">
-                      Web Development
-                    </SelectItem>
+                    <SelectItem value="media-buying">Media Buying</SelectItem>
                     <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-                    <SelectItem value="social-media-design">
-                      Social Media Design
-                    </SelectItem>
+                    <SelectItem value="photo-video-graphy">Photo/Video-Graphy</SelectItem>
+                    <SelectItem value="video-editing">Video Editing</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              {/* text area */}
-              <Textarea
-                /*value={message}*/ className="h-[200px]"
-                /*onChange={e => setMessage(e.target.value)}*/ name="message"
-                placeholder="Type Your message Here"
-              />
-              <Button size="sm" className="max-w-40" type="submit">
-                Send message
+              <Button size="lg" className="max-w-40" type="submit">
+                Submit
               </Button>
             </form>
           </div>
