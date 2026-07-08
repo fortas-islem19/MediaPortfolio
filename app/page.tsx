@@ -132,9 +132,9 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Frontend Developer</span>
+            <span className="text-xl">Senior Video Editor | Video Annotaion Specialist</span>
             <h1 className="h1 mb-6">
-              Hello I&apos;m <br /> <span className="text-accent">Fortas Islem</span>
+              Hello I&apos;m <br /> <span className="text-accent">Fortas Jacoub</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               Transform raw footage into high-retention visual stories that captivate your audience, backed by expert editing and highly accurate video annotation.
