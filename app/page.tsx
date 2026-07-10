@@ -1,4 +1,5 @@
 "use client";
+import React, { useRef } from "react";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -24,8 +25,12 @@ import {
   FaRegCircle,
   FaTiktok,
   FaYoutube,
+  FaChevronLeft,
+  FaChevronRight,
+  FaVectorSquare,
 } from "react-icons/fa";
-import { FiMail, FiVideo, FiZap } from "react-icons/fi";
+import { FiMail, FiVideo, FiZap, FiScissors } from "react-icons/fi";
+import { SiAdobephotoshop, SiAdobepremierepro, SiAdobeaftereffects, SiDavinciresolve, SiCanva } from "react-icons/si";
 
 const categories = ["Motion Graphics", "UGC", "Creative Ads", "Brand Films", "Reels"];
 
@@ -120,6 +125,20 @@ const fadeUp = {
 };
 
 const Home = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="h-full">
       <motion.div
@@ -141,12 +160,12 @@ const Home = () => {
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="Fortas Nour El Islem Yaakoub CV.pdf">
-                <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+              <Button asChild variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                <a href="Fortas Nour El Islem Yaakoub CV.pdf">
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
-                </Button>
-              </a>
+                </a>
+              </Button>
               <div className="mb-8 xl:mb-0">
                 <Social />
               </div>
@@ -158,6 +177,59 @@ const Home = () => {
           </div>
         </div>
       </motion.div>
+
+      <section className="py-12 overflow-hidden mt-8 xl:mt-0 relative">
+        <div className="container mx-auto mb-8 flex flex-col items-center gap-6">
+          <div className="text-center">
+            <p className="text-sm uppercase tracking-widest text-accent mb-2">My Arsenal</p>
+            <h2 className="h2 text-3xl">Tools I Use</h2>
+          </div>
+        </div>
+        <div className="flex w-full overflow-hidden relative">
+          <motion.div
+            className="flex w-max"
+            animate={{ x: ["0%", "-25%"] }}
+            transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+          >
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex gap-8 lg:gap-16 items-center shrink-0 px-4 md:px-8">
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <SiAdobepremierepro className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">Premiere Pro</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <SiAdobeaftereffects className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">After Effects</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <SiDavinciresolve className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">DaVinci Resolve</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <SiAdobephotoshop className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">Photoshop</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <SiCanva className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">Canva Pro</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0 group">
+                  <img
+                    src="https://waseemaitools.com/wp-content/uploads/2026/02/capcut.png"
+                    alt="CapCut Pro"
+                    className="w-12 h-12 object-contain opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                  <span className="text-sm font-semibold tracking-wider">CapCut Pro</span>
+                </div>
+                <div className="flex flex-col items-center gap-3 text-white/50 hover:text-accent transition-colors shrink-0">
+                  <FaVectorSquare className="text-5xl" />
+                  <span className="text-sm font-semibold tracking-wider">CVAT</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       <motion.section
         id="about"
@@ -212,7 +284,7 @@ const Home = () => {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-5">
-          {longFormVideos.map((video) => (
+          {longFormVideos.slice(0, 3).map((video) => (
             <motion.article key={video.title} whileHover={{ y: -8, scale: 1.01 }} className="group glass-panel overflow-hidden p-4 transition-transform w-full lg:w-[calc(33.333%-14px)]">
               <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10">
                 <iframe
@@ -230,6 +302,14 @@ const Home = () => {
               </div>
             </motion.article>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Button asChild size="lg" variant="outline" className="uppercase flex items-center gap-2">
+            <Link href="/work/landscape">
+              <span>View All Landscape</span>
+              <FaArrowRight />
+            </Link>
+          </Button>
         </div>
       </motion.section>
 
@@ -252,7 +332,7 @@ const Home = () => {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-5 justify-center">
-          {reelsVideos.map((video) => (
+          {reelsVideos.slice(0, 4).map((video) => (
             <motion.article key={video.title} whileHover={{ y: -8, scale: 1.01 }} className="glass-panel p-4 transition-transform w-full sm:w-[calc(50%-10px)] xl:w-[calc(25%-15px)]">
               <div className="relative mx-auto aspect-[9/16] max-w-[280px] overflow-hidden rounded-2xl border border-white/10">
                 <iframe
@@ -269,6 +349,14 @@ const Home = () => {
               </div>
             </motion.article>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Button asChild size="lg" variant="outline" className="uppercase flex items-center gap-2">
+            <Link href="/work/reels">
+              <span>View All Reels</span>
+              <FaArrowRight />
+            </Link>
+          </Button>
         </div>
       </motion.section>
 

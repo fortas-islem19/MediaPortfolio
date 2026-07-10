@@ -50,7 +50,7 @@ const MobileNav = () => {
             <nav className="flex flex-col justify-center items-center gap-8">
                 {links.map((link, index) => {
                     return (
-                    <Link href={link.path} key={index} className="text-xl capitalize text-white/75 transition-colors hover:text-white">
+                    <Link href={link.path} key={index} className="text-xl capitalize text-white/75 px-6 py-2 rounded-full transition-all duration-300 ease-in-out hover:bg-accent hover:text-primary hover:font-medium">
                         {link.name}
                     </Link>
                     )

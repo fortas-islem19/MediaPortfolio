@@ -18,9 +18,9 @@ const Header = () => {
         {/* Desktop nav and hire me button  */}
         <div className="hidden xl:flex items-center gap-8">
             <Nav />
-            <Link href="/#contact">
-              <Button className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-lime-300 text-black hover:opacity-95">Hire me</Button>
-            </Link>
+            <Button asChild className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-lime-300 text-black hover:opacity-95">
+              <Link href="/#contact">Hire me</Link>
+            </Button>
         </div>
         {/* Mobile nav and hire me button  */}
           <div className="xl:hidden">
